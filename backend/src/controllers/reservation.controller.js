@@ -11,7 +11,10 @@ const sendReservation = asyncHandler( async(req, res) => {
     if (
         [firstname, email, lastname, phone].some((field) => field?.trim() === "")
     ) {
-        throw new ApiError(400, "All fields are required")
+        // throw new ApiError(400, "All fields are required")
+        return res.status(400).json (
+            new ApiResponse( 400,{}, "All fields are required!" )
+        )
     }
 
     const reservation = await Reservation.create({

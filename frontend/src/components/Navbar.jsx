@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return ( 
         <nav>
-            <div className="logo">THE<span style={{color: "red"}}>FOOD</span>HUB</div>
+            <div className="logo">THE<span style={{color: "red", fontWeight: "bold", fontSize:"40px"}}>FOOD</span>HUB</div>
             <div className={show ? "navLinks showmenu" : "navLinks"}>
                 <div className="links">
                     {
