@@ -38,9 +38,13 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 
 // app.use(cookieParser())
-app.use("/ok", (req, res) => {
-    res.json("It Worked!")
-})
+app.get('/', (req, res) => {
+    res.send('Welcome to the home page!');
+});
+
+app.get('/ok', (req, res) => {
+    res.json('It Worked!');
+});
 
 app.use("/api/v1/reservation", reservationRouter);
 
