@@ -1,8 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import reservationRouter from "./routes/reservation.routes.js"
-
+import reservationRouter from "./routes/reservation.routes.js";
 
 const app = express()
 dotenv.config( 
@@ -35,6 +34,9 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 
 // app.use(cookieParser())
+app.use("/", (req, res) => {
+    res.json("It Worked!")
+})
 
 app.use("/api/v1/reservation", reservationRouter);
 
