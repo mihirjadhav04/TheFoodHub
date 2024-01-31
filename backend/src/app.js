@@ -12,8 +12,12 @@ dotenv.config(
 
 // to connect backend with frontend
 app.use(cors({
-    origin: [process.env.FRONTEND_URL, "the-food-hub-backend.vercel.app"],
-    methods: ["POST"],
+    origin: [
+        process.env.FRONTEND_URL, 
+        "the-food-hub-backend.vercel.app",
+        "the-food-hub-backend-6rpz95mq1-mihir-jadhavs-projects.vercel.app"
+    ],
+    methods: ["GET", "POST"],
     credentials: true
 }))
 
