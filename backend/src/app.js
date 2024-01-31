@@ -38,7 +38,7 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 
 // app.use(cookieParser())
-app.use("/", (req, res) => {
+app.use("/ok", (req, res) => {
     res.json("It Worked!")
 })
 
